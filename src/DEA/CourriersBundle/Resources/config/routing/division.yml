@@ -1,0 +1,30 @@
+division:
+    path:     /
+    defaults: { _controller: "CourriersBundle:Division:index" }
+
+division_show:
+    path:     /{id}/show
+    defaults: { _controller: "CourriersBundle:Division:show" }
+
+division_new:
+    path:     /new
+    defaults: { _controller: "CourriersBundle:Division:new" }
+
+division_create:
+    path:     /create
+    defaults: { _controller: "CourriersBundle:Division:create" }
+    methods:  POST
+
+division_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CourriersBundle:Division:edit" }
+
+division_update:
+    path:     /{id}/update
+    defaults: { _controller: "CourriersBundle:Division:update" }
+    methods:  [POST, PUT]
+
+division_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CourriersBundle:Division:delete" }
+    methods:  [POST, DELETE]

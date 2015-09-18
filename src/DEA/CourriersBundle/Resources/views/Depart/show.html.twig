@@ -1,0 +1,92 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Depart</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Dea</th>
+                <td>{{ entity.dea }}</td>
+            </tr>
+            <tr>
+                <th>Centrale</th>
+                <td>{{ entity.centrale }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ entity.type }}</td>
+            </tr>
+            <tr>
+                <th>Refint</th>
+                <td>{{ entity.refint }}</td>
+            </tr>
+            <tr>
+                <th>Refintpre</th>
+                <td>{{ entity.refintpre }}</td>
+            </tr>
+            <tr>
+                <th>Dateenvoi</th>
+                <td>{{ entity.dateenvoi|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dateboc</th>
+                <td>{{ entity.dateboc|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Refdest</th>
+                <td>{{ entity.refdest }}</td>
+            </tr>
+            <tr>
+                <th>Dest</th>
+                <td>{{ entity.dest }}</td>
+            </tr>
+            <tr>
+                <th>Objet</th>
+                <td>{{ entity.objet }}</td>
+            </tr>
+            <tr>
+                <th>Com</th>
+                <td>{{ entity.com }}</td>
+            </tr>
+            <tr>
+                <th>Flagaffect</th>
+                <td>{{ entity.flagaffect }}</td>
+            </tr>
+            <tr>
+                <th>Flagtraite</th>
+                <td>{{ entity.flagtraite }}</td>
+            </tr>
+            <tr>
+                <th>Flagvalide</th>
+                <td>{{ entity.flagvalide }}</td>
+            </tr>
+            <tr>
+                <th>Flagretard</th>
+                <td>{{ entity.flagretard }}</td>
+            </tr>
+            <tr>
+                <th>Flagarchive</th>
+                <td>{{ entity.flagarchive }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('depart') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('depart_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

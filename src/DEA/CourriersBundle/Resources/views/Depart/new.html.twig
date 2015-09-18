@@ -1,0 +1,144 @@
+<!-- BEGIN FORM-->
+{{ form_start(form,{'attr':{'class':'horizontal-form'} }) }}
+<div class="container">
+    <div class="form-body">
+        <h3 class="form-section">Informations de base</h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Type</label>
+                    {{ form_widget(form.type,{'attr':{'class':'select2_category form-control'} }) }}
+                    {{ form_errors(form.type) }}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">N°DEA</label>
+                    {{ form_widget(form.dea,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.dea) }}
+                </div>
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">N°Centrale</label>
+                    {{ form_widget(form.centrale,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.centrale) }}
+                </div>
+            </div>
+            <!--/span-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Ref. Interne</label>
+                    {{ form_widget(form.refint,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.refint) }}
+                </div>
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Ref. Interne précedente</label>
+                    <select id="{{ form.refintpre.vars.id }}" name="{{ form.refintpre.vars.full_name }}"
+                            class="select2_category form-control" tabindex="1">
+                        <option value>Aucune</option>
+                        <optgroup label="Courriers Arrivée">
+                            {% for arrivee in arrivees %}
+                                <option value="{{ arrivee.refint }}">{{ arrivee.refint }}</option>
+                            {% endfor %}
+                        </optgroup>
+                        <optgroup label="Courriers Départ">
+                            {% for depart in departs %}
+                                <option value="{{ depart.refint }}">{{ depart.refint }}</option>
+                            {% endfor %}
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <!--/span-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Objet</label>
+                    {{ form_widget(form.objet,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.objet) }}
+                </div>
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+        <h3 class="form-section">Autres Informations</h3>
+
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="form-group">
+                    <label>Date d'envoi</label>
+                    {{ form_widget(form.dateenvoi,{'attr':{'class':'form-control date-picker'} }) }}
+                    {{ form_errors(form.dateenvoi) }}
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="form-group">
+                    <label>Date BOC</label>
+                    {{ form_widget(form.dateboc,{'attr':{'class':'form-control date-picker'} }) }}
+                    {{ form_errors(form.dateboc) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Ref. Destinataire</label>
+                    {{ form_widget(form.refdest,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.refdest) }}
+                </div>
+            </div>
+            <!--/span-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Destinataire</label>
+                    {{ form_widget(form.dest,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.dest) }}
+                </div>
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Commentaire</label>
+                    {{ form_widget(form.com,{'attr':{'class':'form-control'} }) }}
+                    {{ form_errors(form.com) }}
+                </div>
+            </div>
+            <!--/span-->
+        </div>
+        <div style="display:none;">
+            <div class="row">
+                <div class="col-md-12">
+                    {{ form_widget(form.flagaffect) }}
+                    {{ form_errors(form.flagaffect) }}
+                    {{ form_widget(form.flagtraite) }}
+                    {{ form_errors(form.flagtraite) }}
+                    {{ form_widget(form.flagvalide) }}
+                    {{ form_errors(form.flagvalide) }}
+                    {{ form_widget(form.flagretard) }}
+                    {{ form_errors(form.flagretard) }}
+                    {{ form_widget(form.flagarchive) }}
+                    {{ form_errors(form.flagarchive) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_widget(form._token) }}
+    <div class="form-actions text-center">
+        <input type="submit" class="btn btn-circle blue" value="Valider">
+        <input type="reset" class="btn btn-circle default" value="Effacer">
+    </div>
+</div>

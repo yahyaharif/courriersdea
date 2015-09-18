@@ -1,0 +1,30 @@
+affectarrivee:
+    path:     /
+    defaults: { _controller: "CourriersBundle:Affectarrivee:index" }
+
+affectarrivee_show:
+    path:     /{id}/show
+    defaults: { _controller: "CourriersBundle:Affectarrivee:show" }
+
+affectarrivee_new:
+    path:     /new
+    defaults: { _controller: "CourriersBundle:Affectarrivee:new" }
+
+affectarrivee_create:
+    path:     /create
+    defaults: { _controller: "CourriersBundle:Affectarrivee:create" }
+    methods:  POST
+
+affectarrivee_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CourriersBundle:Affectarrivee:edit" }
+
+affectarrivee_update:
+    path:     /{id}/update
+    defaults: { _controller: "CourriersBundle:Affectarrivee:update" }
+    methods:  [POST, PUT]
+
+affectarrivee_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CourriersBundle:Affectarrivee:delete" }
+    methods:  [POST, DELETE]

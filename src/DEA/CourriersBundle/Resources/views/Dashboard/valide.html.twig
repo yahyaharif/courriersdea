@@ -1,0 +1,119 @@
+entree.html.twig<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default btn-sm">1</button>
+                <button type="button" class="btn btn-default btn-sm">2</button>
+                <button type="button" class="btn btn-default btn-sm">3</button>
+                <button type="button" class="btn btn-default btn-sm">4</button>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-striped table-bordered table-hover" id="sample_1">
+    <thead>
+    <tr>
+        <th>
+            COURRIER
+        </th>
+        <th>
+            TYPE
+        </th>
+        <th>
+            N°DEA
+        </th>
+        <th>
+            REF. INTERNE
+        </th>
+        <th>
+            DATE ENTREE
+        </th>
+        <th>
+            EXP/DEST
+        </th>
+        <th>
+            DATE ENVOI/EXP
+        </th>
+        <th>
+            OBJET
+        </th>
+        <th>
+            ACTION
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for arrivee in arrivees %}
+        <tr>
+            <td class="text-center">
+                <span class="text-danger">Arrivée</span>
+            </td>
+            <td class="text-center">
+                {{ arrivee.type }}
+            </td>
+            <td class="text-center">
+                {{ arrivee.dea }}
+            </td>
+            <td class="text-center">
+                {{ arrivee.refint }}
+            </td>
+            <td class="text-center">
+                {{ arrivee.dateentree | date('d/m/Y') }}
+            </td>
+            <td class="text-center">
+                {{ arrivee.exp }}
+            </td>
+            <td class="text-center">
+                {{ arrivee.dateexp | date('d/m/Y') }}
+            </td>
+            <td class="text-center">
+                {{ arrivee.objet }}
+            </td>
+            <td class="text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">1</button>
+                    <button type="button" class="btn btn-default btn-sm">2</button>
+                    <button type="button" class="btn btn-default btn-sm">3</button>
+                    <button type="button" class="btn btn-default btn-sm">4</button>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    {% for depart in departs %}
+        <tr>
+            <td class="text-center">
+                <span class="text-success">Départ</span>
+            </td>
+            <td class="text-center">
+                {{ depart.type }}
+            </td>
+            <td class="text-center">
+                {{ depart.dea }}
+            </td>
+            <td class="text-center">
+                {{ depart.refint }}
+            </td>
+            <td class="text-center">
+                -
+            </td>
+            <td class="text-center">
+                {{ depart.dest }}
+            </td>
+            <td class="text-center">
+                {{ depart.dateenvoi | date('d/m/Y') }}
+            </td>
+            <td class="text-center">
+                {{ depart.objet }}
+            </td>
+            <td class="text-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">1</button>
+                    <button type="button" class="btn btn-default btn-sm">2</button>
+                    <button type="button" class="btn btn-default btn-sm">3</button>
+                    <button type="button" class="btn btn-default btn-sm">4</button>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

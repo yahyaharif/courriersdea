@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Affectarrivee list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dateaff</th>
+                <th>Lastaff</th>
+                <th>Rep</th>
+                <th>Daterep</th>
+                <th>Traitement</th>
+                <th>Urgent</th>
+                <th>Arrivee</th>
+                <th>Division</th>
+                <th>User</th>
+                <th>Annotation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('affectarrivee_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.dateaff %}{{ entity.dateaff|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.lastaff }}</td>
+                <td>{{ entity.rep }}</td>
+                <td>{% if entity.daterep %}{{ entity.daterep|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.traitement }}</td>
+                <td>{{ entity.urgent }}</td>
+                <td>{{ entity.arrivee }}</td>
+                <td>{{ entity.division }}</td>
+                <td>{{ entity.user }}</td>
+                <td>{{ entity.annotation }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('affectarrivee_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('affectarrivee_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('affectarrivee_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,30 @@
+depart:
+    path:     /
+    defaults: { _controller: "CourriersBundle:Depart:index" }
+
+depart_show:
+    path:     /{id}/show
+    defaults: { _controller: "CourriersBundle:Depart:show" }
+
+depart_new:
+    path:     /new
+    defaults: { _controller: "CourriersBundle:Depart:new" }
+
+depart_create:
+    path:     /create
+    defaults: { _controller: "CourriersBundle:Depart:create" }
+    methods:  POST
+
+depart_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CourriersBundle:Depart:edit" }
+
+depart_update:
+    path:     /{id}/update
+    defaults: { _controller: "CourriersBundle:Depart:update" }
+    methods:  [POST, PUT]
+
+depart_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CourriersBundle:Depart:delete" }
+    methods:  [POST, DELETE]

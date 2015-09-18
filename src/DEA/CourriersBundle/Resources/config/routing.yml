@@ -1,0 +1,59 @@
+courriers_depart:
+    resource: "@CourriersBundle/Resources/config/routing/depart.yml"
+    prefix:   /depart
+
+courriers_arrivee:
+    resource: "@CourriersBundle/Resources/config/routing/arrivee.yml"
+    prefix:   /arrivee
+
+courriers_log:
+    resource: "@CourriersBundle/Resources/config/routing/log.yml"
+    prefix:   /log
+
+courriers_affectdepart:
+    resource: "@CourriersBundle/Resources/config/routing/affectdepart.yml"
+    prefix:   /affectdepart
+
+courriers_affectarrivee:
+    resource: "@CourriersBundle/Resources/config/routing/affectarrivee.yml"
+    prefix:   /affectarrivee
+
+courriers_service:
+    resource: "@CourriersBundle/Resources/config/routing/service.yml"
+    prefix:   /service
+
+courriers_division:
+    resource: "@CourriersBundle/Resources/config/routing/division.yml"
+    prefix:   /division
+
+dashboard:
+    path: /
+    defaults: { _controller: CourriersBundle:Dashboard:index }
+
+dashboard_entree:
+    path: /entree
+    defaults: { _controller: CourriersBundle:Dashboard:entree }
+
+dashboard_traite:
+    path: /traite
+    defaults: { _controller: CourriersBundle:Dashboard:traite }
+
+dashboard_valide:
+    path: /valide
+    defaults: { _controller: CourriersBundle:Dashboard:valide }
+
+dashboard_retard:
+    path: /retard
+    defaults: { _controller: CourriersBundle:Dashboard:retard }
+
+dashboard_mescourriers:
+    path: /mescourriers
+    defaults: { _controller: CourriersBundle:Dashboard:mescourriers }
+
+dashboard_archive:
+    path: /archive
+    defaults: { _controller: CourriersBundle:Dashboard:archive }
+
+users:
+    path: /users
+    defaults: { _controller: CourriersBundle:User:index f}

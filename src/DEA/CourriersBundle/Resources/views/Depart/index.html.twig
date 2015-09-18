@@ -1,0 +1,71 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Depart list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dea</th>
+                <th>Centrale</th>
+                <th>Type</th>
+                <th>Refint</th>
+                <th>Refintpre</th>
+                <th>Dateenvoi</th>
+                <th>Dateboc</th>
+                <th>Refdest</th>
+                <th>Dest</th>
+                <th>Objet</th>
+                <th>Com</th>
+                <th>Flagaffect</th>
+                <th>Flagtraite</th>
+                <th>Flagvalide</th>
+                <th>Flagretard</th>
+                <th>Flagarchive</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('depart_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.dea }}</td>
+                <td>{{ entity.centrale }}</td>
+                <td>{{ entity.type }}</td>
+                <td>{{ entity.refint }}</td>
+                <td>{{ entity.refintpre }}</td>
+                <td>{% if entity.dateenvoi %}{{ entity.dateenvoi|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dateboc %}{{ entity.dateboc|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.refdest }}</td>
+                <td>{{ entity.dest }}</td>
+                <td>{{ entity.objet }}</td>
+                <td>{{ entity.com }}</td>
+                <td>{{ entity.flagaffect }}</td>
+                <td>{{ entity.flagtraite }}</td>
+                <td>{{ entity.flagvalide }}</td>
+                <td>{{ entity.flagretard }}</td>
+                <td>{{ entity.flagarchive }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('depart_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('depart_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('depart_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

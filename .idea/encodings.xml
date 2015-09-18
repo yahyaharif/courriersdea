@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Resources/views/base.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Arrivee/new.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/archive.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/entree.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/mescourriers.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/retard.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/traite.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/valide.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Depart/new.html.twig" charset="UTF-8" />
+  </component>
+</project>

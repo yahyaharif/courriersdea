@@ -1,0 +1,30 @@
+log:
+    path:     /
+    defaults: { _controller: "CourriersBundle:Log:index" }
+
+log_show:
+    path:     /{id}/show
+    defaults: { _controller: "CourriersBundle:Log:show" }
+
+log_new:
+    path:     /new
+    defaults: { _controller: "CourriersBundle:Log:new" }
+
+log_create:
+    path:     /create
+    defaults: { _controller: "CourriersBundle:Log:create" }
+    methods:  POST
+
+log_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CourriersBundle:Log:edit" }
+
+log_update:
+    path:     /{id}/update
+    defaults: { _controller: "CourriersBundle:Log:update" }
+    methods:  [POST, PUT]
+
+log_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CourriersBundle:Log:delete" }
+    methods:  [POST, DELETE]
