@@ -56,4 +56,4 @@ dashboard_archive:
 
 users:
     path: /users
-    defaults: { _controller: CourriersBundle:User:index f}
+    defaults: { _controller: CourriersBundle:User:index }
