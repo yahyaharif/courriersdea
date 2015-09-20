@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Resources/views/base.html.twig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Arrivee/new.html.twig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/DEA/CourriersBundle/Resources/views/Dashboard/archive.html.twig" charset="UTF-8" />
